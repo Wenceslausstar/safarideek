@@ -51,9 +51,10 @@ a:hover {
 .intro-bg {
   background: url(../images/intro-bg-twiga-campsite-kws.jpg) no-repeat center;
   background-size: cover;
-  padding: 50px;
+  padding-top: 50px;
   color: #f4f4f4;
   text-shadow: 1px 1px 1px 1px #ccc;
+  height: 600px;
 }
 
 .intro-bg h1 {
