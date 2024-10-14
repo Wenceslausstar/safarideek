@@ -1,0 +1,443 @@
+/* Base styles for desktop and larger devices */
+h1,
+h2 {
+  color: rgb(225, 115, 15);
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+h4,
+h5,
+h6 {
+  color: #333;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: bold;
+}
+
+a,
+.orange {
+  color: rgb(225, 115, 15);
+}
+
+a:hover {
+  color: #aeaeae;
+  text-decoration: none;
+}
+
+.contacts-top a {
+  color: #fff;
+}
+
+.header h3 {
+  color: rgb(225, 115, 15);
+}
+
+.header,
+.copyright {
+  background: url(../images/bg.jpg);
+}
+
+.header a:hover {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.intro-bg {
+  background: url(../images/intro-bg-twiga-campsite-kws.jpg) no-repeat center;
+  background-size: cover;
+  padding: 50px;
+  color: #f4f4f4;
+  text-shadow: 1px 1px 1px 1px #ccc;
+}
+
+.intro-bg h1 {
+  color: #f4f4f4;
+  text-shadow: 1px 1px 1px 1px #ccc;
+  font-size: 40px;
+}
+
+.slider {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.article {
+  background: rgb(234, 234, 234);
+  padding: 40px 0px 60px;
+  border-bottom: 1px solid #ddd;
+}
+
+.profile {
+  background: #fff;
+  padding: 80px 0px 60px;
+  border-bottom: 1px solid #ddd;
+}
+
+.quote {
+  background: #eaeaea;
+  font-size: 16px;
+  padding: 50px 0 40px;
+}
+
+.img-left {
+  float: left;
+  margin-right: 10px;
+}
+
+.img-center {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.gallery {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.sec .contacts {
+  background: #fff;
+  color: rgb(93, 93, 93);
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.6em;
+  margin-bottom: 0px;
+  margin-left: 15px;
+  padding-top: 30px;
+}
+
+/* Navbar styles */
+.navbar {
+  padding: 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.nav-links li {
+  margin-left: 15px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #f3f5f7;
+  font-size: 16px;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+.nav-links li i {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+/* Media queries for responsiveness */
+
+/* Small screens (mobile) */
+@media (max-width: 767px) {
+  h1,
+  h2 {
+    font-size: 24px; /* Smaller font size for headings */
+    color: rgb(225, 115, 15);
+    font-family: "Source Sans Pro", sans-serif;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 18px; /* Adjust smaller headings */
+    color: black;
+  }
+
+  .intro-bg {
+    padding: 30px; /* Reduce padding */
+    background-size: cover;
+  }
+
+  .intro-bg h1 {
+    font-size: 28px; /* Smaller title for mobile */
+  }
+
+  .article,
+  .profile,
+  .quote {
+    padding: 20px 10px; /* Reduce padding on mobile */
+  }
+
+  .navbar-content {
+    justify-content: center; /* Center navbar on small screens */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack nav links vertically */
+    text-align: center;
+  }
+
+  .nav-links li {
+    margin-left: 0; /* Remove left margin for stacked links */
+    margin-bottom: 10px; /* Add vertical spacing */
+  }
+
+  .img-left,
+  .img-center {
+    float: none;
+    margin: 0 auto; /* Center images */
+  }
+
+  .gallery {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+/* presentation*/
+.container2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default to 3 columns */
+  gap: 40px;
+  padding: 10px;
+  border-radius: 15px;
+  align-items: center; /* Center items vertically within their grid cell */
+  justify-items: center; /* Center items horizontally within their grid cell */
+  /* height: 600px;  You may want to adjust this for responsiveness */
+}
+.pour {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Item styles */
+.section {
+  padding: 20px;
+  background-color: burlywood;
+  border-radius: 20px;
+  height: 400px;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.fas fa-eye icon {
+  color: green;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-2 {
+  color: green;
+  align-items: center;
+}
+
+/*presatation edn*/
+
+/* Medium screens (tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  h1,
+  h2 {
+    font-size: 32px; /* Adjust heading sizes for tablets */
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 22px;
+  }
+  .section {
+    padding: 20px;
+    margin: 25px;
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+  .container2 {
+    grid-template-columns: 1fr; /* 1 column for small screens */
+  }
+
+  .intro-bg {
+    padding: 40px; /* Slightly reduce padding */
+  }
+
+  .intro-bg h1 {
+    font-size: 36px; /* Adjust title for tablet */
+  }
+
+  .article,
+  .profile,
+  .quote {
+    padding: 30px 20px; /* Adjust padding */
+  }
+
+  .navbar-content {
+    justify-content: flex-end; /* Align navbar to the right */
+  }
+
+  .nav-links {
+    flex-direction: row; /* Show horizontal nav links on tablets */
+  }
+
+  .nav-links li {
+    margin-left: 10px; /* Adjust spacing */
+  }
+
+  .gallery1 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 1.5rem; /* Larger padding on desktops */
+  }
+
+  h1,
+  h2 {
+    font-size: 40px; /* Larger headings for desktop */
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 28px;
+  }
+
+  .intro-bg h1 {
+    font-size: 40px;
+  }
+
+  .article,
+  .profile,
+  .quote {
+    padding: 40px 30px;
+  }
+
+  .nav-links li {
+    margin-left: 15px;
+  }
+}
+/*test 4*/
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+
+  margin: 0;
+  padding: 0;
+}
+
+.container3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Text Section with 3/4 width for text and 1/4 width for image */
+.text-section {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* Experience section occupies 3/4 of the width */
+  gap: 20px; /* Space between text and image */
+}
+
+.experience-section {
+  background-color: #623b1d;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.activities-row {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* 1/4 for image and 3/4 for text */
+  gap: 20px;
+}
+
+.activities-section {
+  background-color: #fdd36e;
+  color: #623b1d;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.activities-section h2,
+.experience-section h2 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 1.8em;
+}
+
+.activities-section p,
+.experience-section p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+.ratings {
+  display: flex;
+  align-items: center;
+}
+
+.ratings span {
+  margin-right: 5px;
+}
+
+.stars {
+  margin-right: 15px;
+  color: gold;
+}
+
+.arrow-button {
+  font-size: 2em;
+  color: white;
+  background-color: #fdd36e;
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.activities-section a {
+  text-decoration: none;
+  color: #623b1d;
+  font-weight: bold;
+}
+
+.image-content img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .text-section,
+  .activities-row {
+    grid-template-columns: 1fr;
+  }
+}
