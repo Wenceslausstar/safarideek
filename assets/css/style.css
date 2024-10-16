@@ -163,72 +163,18 @@ a:hover {
 
 /* Small screens (mobile) */
 @media (max-width: 767px) {
-  h1,
-  h2 {
-    font-size: 24px; /* Smaller font size for headings */
-    color: rgb(225, 115, 15);
-    font-family: "Source Sans Pro", sans-serif;
-  }
-
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-size: 18px; /* Adjust smaller headings */
-    color: black;
-  }
-
-  .intro-bg {
-    padding: 30px; /* Reduce padding */
-    background-size: cover;
-  }
-
-  .intro-bg h1 {
-    font-size: 28px; /* Smaller title for mobile */
-  }
-
-  .article,
-  .profile,
-  .quote {
-    padding: 20px 10px; /* Reduce padding on mobile */
-  }
-
-  .navbar-content {
-    justify-content: center; /* Center navbar on small screens */
-  }
-
-  .nav-links {
-    flex-direction: column; /* Stack nav links vertically */
-    text-align: center;
-  }
-
-  .nav-links li {
-    margin-left: 0; /* Remove left margin for stacked links */
-    margin-bottom: 10px; /* Add vertical spacing */
-  }
-
-  .img-left,
-  .img-center {
-    float: none;
-    margin: 0 auto; /* Center images */
-  }
-
-  .gallery {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
 }
-/* presentation*/
+/* presentation
 .container2 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Default to 3 columns */
+  grid-template-columns: repeat(3, 1fr); /* Default to 3 columns 
   gap: 40px;
   padding: 10px;
   border-radius: 15px;
-  align-items: center; /* Center items vertically within their grid cell */
-  justify-items: center; /* Center items horizontally within their grid cell */
-  /* height: 600px;  You may want to adjust this for responsiveness */
-}
+  align-items: center; /* Center items vertically within their grid cell *
+  justify-items: center; Center items horizontally within their grid cell *
+  height: 600px;  You may want to adjust this for responsiveness 
+}*/
 .pour {
   text-transform: uppercase;
   font-weight: bold;
@@ -437,8 +383,69 @@ body {
 
 /* Responsive Styling */
 @media (max-width: 768px) {
+  h1,
+  h2 {
+    font-size: 24px; /* Smaller font size for headings */
+    color: rgb(225, 115, 15);
+    font-family: "Source Sans Pro", sans-serif;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 18px; /* Adjust smaller headings */
+    color: black;
+  }
+
+  .intro-bg {
+    padding: 30px; /* Reduce padding */
+    background-size: cover;
+  }
+
+  .intro-bg h1 {
+    font-size: 28px; /* Smaller title for mobile */
+  }
+
+  .article,
+  .profile,
+  .quote {
+    padding: 20px 10px; /* Reduce padding on mobile */
+  }
+
+  .navbar-content {
+    justify-content: center; /* Center navbar on small screens */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack nav links vertically */
+    text-align: center;
+  }
+
+  .nav-links li {
+    margin-left: 0; /* Remove left margin for stacked links */
+    margin-bottom: 10px; /* Add vertical spacing */
+  }
+
+  .img-left,
+  .img-center {
+    float: none;
+    margin: 0 auto; /* Center images */
+  }
+
+  .gallery {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
   .text-section,
   .activities-row {
     grid-template-columns: 1fr;
+  }
+  .info-container {
+    grid-template-columns: 1fr;
+  }
+
+  .info-box::before {
+    display: none;
   }
 }
