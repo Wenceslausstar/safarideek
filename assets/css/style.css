@@ -170,6 +170,16 @@ a:hover {
   cursor: pointer;
   padding: 10px;
 }
+.container2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default to 3 columns */
+  gap: 40px;
+  padding: 10px;
+  border-radius: 15px;
+  align-items: center; /* Center items vertically within their grid cell */
+  justify-items: center; /* Center items horizontally within their grid cell */
+  /* height: 600px;  You may want to adjust this for responsiveness */
+}
 .hamburger span {
   background-color: #333;
   height: 3px;
@@ -534,7 +544,7 @@ body {
 }
 
 /* Gallery Grid */
-.row {
+.row-gal {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -642,6 +652,12 @@ body {
   }
   .col {
     flex: 1 1 45%; /* Adjust to show two images per row on medium screens */
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
   }
 }
 
