@@ -38,7 +38,6 @@ a:hover {
   color: rgb(225, 115, 15);
 }
 
-.header,
 .copyright {
   background: url(../images/bg.jpg);
 }
@@ -126,7 +125,7 @@ a:hover {
 
 .navbar-content {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
 }
@@ -138,16 +137,23 @@ a:hover {
   display: flex;
   justify-content: flex-end;
   width: 100%;
+  gap: 15px;
 }
 
 .nav-links li {
   margin-left: 15px;
+  list-style: none;
 }
 
 .nav-links li a {
   text-decoration: none;
   color: #f3f5f7;
   font-size: 16px;
+}
+
+.orange-link {
+  color: #ff8800;
+  font-weight: bold;
 }
 
 .nav-links li a:hover {
@@ -158,23 +164,74 @@ a:hover {
   margin-right: 8px;
   font-size: 18px;
 }
-
-/* Media queries for responsiveness */
-
-/* Small screens (mobile) */
-@media (max-width: 767px) {
-}
-/* presentation
-.container2 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Default to 3 columns 
-  gap: 40px;
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
   padding: 10px;
-  border-radius: 15px;
-  align-items: center; /* Center items vertically within their grid cell *
-  justify-items: center; Center items horizontally within their grid cell *
-  height: 600px;  You may want to adjust this for responsiveness 
-}*/
+}
+.hamburger span {
+  background-color: #333;
+  height: 3px;
+  margin: 5px 0;
+  width: 25px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 999;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex start;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-links li {
+  margin: 15px 0;
+}
+
+.sidebar-links a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+}
+
+/* Back Button Styling */
+.back-button {
+  background-color: #ff8800; /* Color for the back button */
+  color: white; /* Text color */
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px; /* Space below the button */
+}
+.gallery-button {
+  background-color: #d4c8ba; /* Color for the back button */
+  color: white; /* Text color */
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px; /* Space below the button */
+}
 .pour {
   text-transform: uppercase;
   font-weight: bold;
@@ -190,11 +247,6 @@ a:hover {
   border-radius: 10px;
   justify-content: space-evenly;
   align-items: center;
-}
-.fas fa-eye icon {
-  color: green;
-  align-items: center;
-  justify-content: center;
 }
 
 .section-2 {
@@ -225,6 +277,9 @@ a:hover {
   }
   .container2 {
     grid-template-columns: 1fr; /* 1 column for small screens */
+  }
+  .container3 {
+    transition: transform 0.3s ease;
   }
 
   .intro-bg {
@@ -360,16 +415,6 @@ body {
   color: gold;
 }
 
-.arrow-button {
-  font-size: 2em;
-  color: white;
-  background-color: #fdd36e;
-  padding: 10px;
-  border-radius: 50%;
-  display: inline-block;
-  margin-top: 20px;
-}
-
 .activities-section a {
   text-decoration: none;
   color: #623b1d;
@@ -379,6 +424,144 @@ body {
 .image-content img {
   width: 100%;
   border-radius: 10px;
+}
+
+.info-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 200%;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.info-box {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-10px);
+}
+
+.info-box h3 {
+  margin: 20px 0 10px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.info-box p {
+  font-size: 1em;
+  color: #666;
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 2em;
+}
+
+/* Specific Section Colors */
+.mission {
+  border-top: 10px solid #e94e1b;
+}
+
+.vision {
+  border-top: 10px solid #00a2e8;
+}
+
+.values {
+  border-top: 10px solid #f7a600;
+}
+
+/* Icon Circle Border Colors */
+.mission .icon-circle {
+  border-color: #e94e1b;
+}
+
+.vision .icon-circle {
+  border-color: #00a2e8;
+}
+
+.values .icon-circle {
+  border-color: #f7a600;
+}
+
+/* Connecting Lines */
+.info-box::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  width: 60px;
+  height: 5px;
+  background-color: currentColor;
+}
+
+.info-box.mission::before {
+  background-color: #e94e1b;
+}
+
+.info-box.vision::before {
+  background-color: #00a2e8;
+}
+
+.info-box.values::before {
+  display: none;
+}
+/*gallery section*/
+
+.container {
+  width: 100%;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Gallery Grid */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.col {
+  flex: 1 1 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.img-rounded {
+  border-radius: 10px;
+}
+
+/* Text Centering */
+.text-center {
+  text-align: center;
+  margin-top: 20px;
 }
 
 /* Responsive Styling */
@@ -401,6 +584,7 @@ body {
   .intro-bg {
     padding: 30px; /* Reduce padding */
     background-size: cover;
+    height: 300px; /* Reduce the height for medium-sized screens */
   }
 
   .intro-bg h1 {
@@ -414,19 +598,27 @@ body {
   }
 
   .navbar-content {
-    justify-content: center; /* Center navbar on small screens */
+    display: none;
   }
 
-  .nav-links {
-    flex-direction: column; /* Stack nav links vertically */
-    text-align: center;
+  /* Display the hamburger menu on small screens */
+  .hamburger {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 15px;
   }
 
-  .nav-links li {
-    margin-left: 0; /* Remove left margin for stacked links */
-    margin-bottom: 10px; /* Add vertical spacing */
+  /* Show the navbar when the hamburger is clicked */
+  .navbar.active .navbar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
-
+  .sidebar.active {
+    transform: translateX(0);
+  }
   .img-left,
   .img-center {
     float: none;
@@ -434,8 +626,8 @@ body {
   }
 
   .gallery {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
   }
   .text-section,
   .activities-row {
@@ -447,5 +639,17 @@ body {
 
   .info-box::before {
     display: none;
+  }
+  .col {
+    flex: 1 1 45%; /* Adjust to show two images per row on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .col {
+    flex: 1 1 100%; /* Stack all images vertically on small screens */
+  }
+  .intro-bg {
+    height: 200px; /* Reduce the height for smaller screens */
   }
 }
