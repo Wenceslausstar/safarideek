@@ -1,4 +1,7 @@
 /* Base styles for desktop and larger devices */
+body {
+  scrollbar-width: none;
+}
 h1,
 h2 {
   color: rgb(225, 115, 15);
@@ -114,23 +117,40 @@ a:hover {
 
 /* Navbar styles */
 .navbar {
-  padding: 1rem;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1200px;
+  /* max-width: 800px; */
 }
 
 .container-nav {
   display: flex;
   justify-content: flex-end;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navbar-content {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
+  justify-content: space-between;
 }
 
-.nav-links {
+.left-links a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* .nav-links {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -138,23 +158,41 @@ a:hover {
   justify-content: flex-end;
   width: 100%;
   gap: 15px;
+} */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  /* width: 100%; */
+  padding-bottom: 2px;
 }
-
 .nav-links li {
   margin-left: 15px;
   list-style: none;
+  margin: 0;
 }
-
+.nav-links a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+  display: flex;
+  align-items: center;
+}
+.nav-links a i {
+  margin-right: 8px;
+}
 .nav-links li a {
   text-decoration: none;
-  color: #ff8800;
+  color: white;
   font-size: 16px;
 }
 
-.orange-link {
+/* .orange-link {
   color: #ff8800;
   font-weight: bold;
-}
+} */
 
 .nav-links li a:hover {
   text-decoration: underline;
@@ -163,12 +201,30 @@ a:hover {
 .nav-links li i {
   margin-right: 8px;
   font-size: 18px;
+  list-style: none;
+  display: flex;
+  align-items: center;
 }
+/* App button style */
+.app-button,
+.orange-link {
+  background-color: rgb(225, 115, 15);
+  /* color: white; */
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  width: fit-content;
+}
+
+/* .app-button:hover {
+  background-color: #155ab6;
+} */
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  padding: 10px;
+  /* padding: 10px; */
 }
 .container2 {
   display: grid;
@@ -264,6 +320,123 @@ a:hover {
   align-items: center;
 }
 
+/* introduction */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.travel-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+}
+
+.description {
+  line-height: 1.6;
+  color: #333;
+  font-family: Arial, sans-serif;
+  grid-area: intro;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr; /* Auto height for the intro, then flexible height for items */
+  gap: 2rem;
+  grid-template-areas:
+    "intro intro item3 item4"
+    "item1 item2 item3 item4";
+  align-items: end; /* Align items at the bottom of the grid */
+}
+
+.card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  height: 100%; /* Ensure all cards fill their grid space */
+}
+
+.card.item1 {
+  grid-area: item1;
+  height: 300px; /* Fixed height for item1 */
+  align-self: end; /* Align to the bottom */
+}
+
+.card.item2 {
+  grid-area: item2;
+  height: 300px; /* Fixed height for item2 */
+  align-self: end; /* Align to the bottom */
+}
+
+.card.item3 {
+  grid-area: item3;
+  height: 500px; /* Taller height for item3 */
+}
+
+.card.item4 {
+  grid-area: item4;
+  height: 500px; /* Taller height for item4 */
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  color: white;
+  z-index: 1;
+  font-family: Arial, sans-serif;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 0.25rem;
+}
+
+.card-subtitle {
+  font-size: 1.25rem;
+  font-style: italic;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "intro"
+      "item1"
+      "item2"
+      "item3"
+      "item4";
+    align-items: stretch;
+  }
+
+  .description {
+    grid-column: span 1; /* Make description stretch across the entire row */
+    margin-bottom: 2rem; /* Add some margin at the bottom */
+  }
+
+  .card {
+    height: auto; /* Allow cards to have auto height */
+  }
+
+  /* Reduce heights for the larger items */
+  .card.item3,
+  .card.item4 {
+    height: 300px; /* Set to 300px for mobile */
+  }
+}
 /*presatation edn*/
 
 /* Medium screens (tablets) */
@@ -311,7 +484,7 @@ a:hover {
   }
 
   .nav-links {
-    flex-direction: row; /* Show horizontal nav links on tablets */
+    display: none; /* Show horizontal nav links on tablets */
   }
 
   .nav-links li {
@@ -601,6 +774,8 @@ body {
     font-size: 28px; /* Smaller title for mobile */
   }
 
+  /* articles */
+
   .article,
   .profile,
   .quote {
@@ -618,9 +793,19 @@ body {
     right: 20px;
     top: 15px;
   }
+  .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: #333;
+  }
 
   /* Show the navbar when the hamburger is clicked */
-  .navbar.active .navbar-content {
+  .navbar {
+    display: none;
+  }
+  .active .navbar-content {
     display: flex;
     flex-direction: column;
     align-items: center;
