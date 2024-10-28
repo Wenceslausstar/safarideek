@@ -5,7 +5,7 @@ body {
 h1,
 h2 {
   color: rgb(225, 115, 15);
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Comic Sans MS", cursive, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -14,12 +14,13 @@ h3 {
   color: black;
   font-weight: bold;
   text-transform: uppercase;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 h4,
 h5,
 h6 {
   color: #333;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Comic Sans MS", cursive, sans-serif;
   font-size: bold;
 }
 
@@ -148,6 +149,7 @@ a:hover {
   color: white;
   font-weight: bold;
   text-decoration: none;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 /* .nav-links {
@@ -166,6 +168,7 @@ a:hover {
   justify-content: flex-end;
   /* width: 100%; */
   padding-bottom: 2px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 .nav-links li {
   margin-left: 15px;
@@ -321,6 +324,7 @@ a:hover {
 }
 
 /* introduction */
+/* section start */
 * {
   margin: 0;
   padding: 0;
@@ -345,12 +349,12 @@ a:hover {
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto 1fr; /* Auto height for the intro, then flexible height for items */
+  grid-template-rows: auto 1fr;
   gap: 2rem;
   grid-template-areas:
     "intro intro item3 item4"
     "item1 item2 item3 item4";
-  align-items: end; /* Align items at the bottom of the grid */
+  align-items: end;
 }
 
 .card {
@@ -358,29 +362,63 @@ a:hover {
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
-  height: 100%; /* Ensure all cards fill their grid space */
+  height: 100%;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+}
+
+.card-back {
+  background-color: #3c2415; /* Dark brown background */
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
 }
 
 .card.item1 {
   grid-area: item1;
-  height: 300px; /* Fixed height for item1 */
-  align-self: end; /* Align to the bottom */
+  height: 300px;
+  align-self: end;
 }
 
 .card.item2 {
   grid-area: item2;
-  height: 300px; /* Fixed height for item2 */
-  align-self: end; /* Align to the bottom */
+  height: 300px;
+  align-self: end;
 }
 
 .card.item3 {
   grid-area: item3;
-  height: 500px; /* Taller height for item3 */
+  height: 500px;
 }
 
 .card.item4 {
   grid-area: item4;
-  height: 500px; /* Taller height for item4 */
+  height: 500px;
 }
 
 .card img {
@@ -409,7 +447,19 @@ a:hover {
   font-style: italic;
 }
 
-/* Responsive Adjustments */
+.back-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+.back-text {
+  line-height: 1.6;
+}
+.card-content h3 {
+  color: rgb(255, 255, 255);
+}
+
 @media (max-width: 1024px) {
   .grid {
     grid-template-columns: 1fr;
@@ -421,20 +471,18 @@ a:hover {
       "item4";
     align-items: stretch;
   }
+  .card-content h3 {
+    color: rgb(255, 255, 255);
+  }
 
   .description {
-    grid-column: span 1; /* Make description stretch across the entire row */
-    margin-bottom: 2rem; /* Add some margin at the bottom */
+    grid-column: span 1;
+    margin-bottom: 2rem;
   }
 
-  .card {
-    height: auto; /* Allow cards to have auto height */
-  }
-
-  /* Reduce heights for the larger items */
   .card.item3,
   .card.item4 {
-    height: 300px; /* Set to 300px for mobile */
+    height: 300px;
   }
 }
 /*presatation edn*/
@@ -762,6 +810,7 @@ body {
   h6 {
     font-size: 18px; /* Adjust smaller headings */
     color: black;
+    font-family: "Comic Sans MS", cursive, sans-serif;
   }
 
   .intro-bg {
