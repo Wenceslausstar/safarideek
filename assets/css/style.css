@@ -625,7 +625,9 @@ body {
   font-family: "Comic Sans MS", cursive, sans-serif;
   font-size: 1.8em;
 }
-
+.row h3 h4 {
+  font-size: 1.8em;
+}
 .activities-section p,
 .experience-section p {
   font-size: 1.1em;
@@ -834,7 +836,9 @@ body {
   .navbar-content {
     display: none;
   }
-
+  .row h3 h4 {
+    font-size: 1.8em;
+  }
   /* Display the hamburger menu on small screens */
   .hamburger {
     display: flex;
