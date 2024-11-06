@@ -17,11 +17,10 @@ h3 {
   /* font-family: "Comic Sans MS", cursive, sans-serif; */
 }
 h4,
-
 h5,
 h6 {
   color: #333;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Comic Sans MS", cursive, sans-serif;
   font-size: bold;
 }
 
@@ -812,7 +811,6 @@ body {
     color: rgb(225, 115, 15);
     font-family: "Source Sans Pro", sans-serif;
   }
-
   h3 {
     font-family: "Source Sans Pro", sans-serif;
   }
