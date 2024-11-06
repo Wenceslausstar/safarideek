@@ -14,7 +14,7 @@ h3 {
   color: black;
   font-weight: bold;
   text-transform: uppercase;
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  /* font-family: "Comic Sans MS", cursive, sans-serif; */
 }
 h4,
 h5,
@@ -389,26 +389,32 @@ a:hover {
 }
 
 .card-back {
-  background-color: #3c2415; /* Dark brown background */
+  /* background-color: #3c2415;  Dark brown background*/
   color: white;
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
 }
 
-.card.item1 {
+.card.item11 {
   grid-area: item1;
   height: 300px;
   align-self: end;
+  background-color: #e94e1b;
+  color: white;
 }
-
-.card.item2 {
+.text-center h4 {
+  color: white;
+}
+.card.item22 {
   grid-area: item2;
   height: 300px;
   align-self: end;
+  background-color: #3c2415;
+  color: white;
 }
 
 .card.item3 {
