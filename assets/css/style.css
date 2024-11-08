@@ -913,4 +913,21 @@ body {
   .intro-bg {
     height: 200px; /* Reduce the height for smaller screens */
   }
+    h1,
+  h2 {
+    font-size: 18px; /* Smaller font size for headings */
+    color: rgb(225, 115, 15);
+    font-family: "Source Sans Pro", sans-serif;
+  }
+  h3 {
+    font-family: "Source Sans Pro", sans-serif;
+  }
+  h4,
+  h5,
+  h6 {
+    font-size: 12px; /* Adjust smaller headings */
+    color: black;
+    font-family: "Source Sans Pro", sans-serif;
+  }
+    
 }
