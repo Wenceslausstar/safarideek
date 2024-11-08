@@ -915,7 +915,7 @@ body {
   }
     h1,
   h2 {
-    font-size: 18px; /* Smaller font size for headings */
+    font-size: 12px; /* Smaller font size for headings */
     color: rgb(225, 115, 15);
     font-family: "Source Sans Pro", sans-serif;
   }
@@ -925,7 +925,7 @@ body {
   h4,
   h5,
   h6 {
-    font-size: 12px; /* Adjust smaller headings */
+    font-size: 8px; /* Adjust smaller headings */
     color: black;
     font-family: "Source Sans Pro", sans-serif;
   }
