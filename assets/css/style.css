@@ -829,8 +829,11 @@ body {
   }
 
   .intro-bg h1 {
-    font-size: 28px; /* Smaller title for mobile */
+    font-size: 18px; /* Smaller title for mobile */
   }
+    .intro-bg h4 {
+    font-size: 12px;
+    }
 
   /* articles */
 
@@ -928,6 +931,9 @@ body {
     font-size: 8px; /* Adjust smaller headings */
     color: black;
     font-family: "Source Sans Pro", sans-serif;
+  }
+  .intro-bg h1,h4 {
+    font-size: 12px;
   }
     
 }
